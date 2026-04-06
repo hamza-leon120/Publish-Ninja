@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+.container {
+    margin: 0 auto;
+}
+
+body {
+    background-color: #E1D5CA;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+section {
+    margin-top: 130px;
+}
+
+@media (max-width : 768px) {
+    .container {
+        padding: 0px 25px;
+    }
+
+    section {
+        margin-top: 80px;
+    }
+
+    header ul {
+        position: absolute;
+        top: 61px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 0px 0px 20px 20px;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+    header ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 55px;
+    }
+    header ul li:not(:last-child) {
+        border-bottom: 1px solid #F9D783;
+    }
+    header ul li:first-child {
+        margin-top: 20px;
+    }
+}
