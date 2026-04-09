@@ -20,7 +20,7 @@ function App() {
         }
       })
     }, {
-      threshold: 0.3
+      threshold: 0.2
     })
     sectionRefs.current.forEach(function(section){
       observer.observe(section)
@@ -28,9 +28,9 @@ function App() {
   }, [])
   return (
     <>
-      <Header />
-      <Hero />
-      <Software />
+      <Header data={sectionRefs}/>
+      <Hero data={sectionRefs}/>
+      <Software data={sectionRefs}/>
       <Services data={sectionRefs} />
       <ElegantStylish data={sectionRefs} />
       <Plan data={sectionRefs} />
