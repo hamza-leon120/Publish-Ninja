@@ -8,8 +8,8 @@ function Software(){
         <section>
             <div className="container">
                 <div className='p-[46px_10px_46px_10px] bg-[white] rounded-[15px]'>
-                    <p className="text-2xl text-center mb-[41px] md:text-3xl">Over 32k+ Software Businesses Growing With Publish Ninja </p>
-                    <div className='flex justify-center flex-wrap gap-[51px]'>
+                    <p className="text-2xl text-center mb-10.25 md:text-3xl">Over 32k+ Software Businesses Growing With Publish Ninja </p>
+                    <div className='flex justify-center flex-wrap gap-12.75'>
                         <div>
                             <img src = {img5} alt="" />
                         </div>
