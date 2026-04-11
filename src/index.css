@@ -11,6 +11,11 @@ body {
     font-style: normal;
 }
 
+header,
+.up {
+    transition: opacity 0.6s ease ;
+}
+
 section {
     margin-top: 130px;
     transition: opacity 0.6s ease, transform 0.6s ease;

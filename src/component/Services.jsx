@@ -24,7 +24,7 @@ function Services(prop) {
         )
     })
     return (
-        <section className="opacity-0 transform-[translateY(30px)]" ref={function(ele){return prop.data.current[0] = ele}}>
+        <section id="Services" className="opacity-0 transform-[translateY(30px)]" ref={function(ele){return prop.data.current[0] = ele}}>
             <div className="container">
                 <div className="flex flex-col gap-6 justify-between mb-7.25 text-center md:text-start lg:flex-row">
                     <h2 className="text-3xl font-bold md:text-4xl">Our Included Services</h2>

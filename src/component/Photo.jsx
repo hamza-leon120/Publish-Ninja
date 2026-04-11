@@ -4,7 +4,7 @@ import img13 from '../img/image-13.webp'
 import img14 from '../img/image-14.webp'
 function Photo(prop){
     return (
-        <section className='opacity-0 transform-[translateY(30px)]' ref={function(ele){return prop.data.current[3] = ele}}>
+        <section id='Portfolio' className='opacity-0 transform-[translateY(30px)]' ref={function(ele){return prop.data.current[3] = ele}}>
             <div className="container">
                 <div className='flex justify-center gap-3.75 flex-wrap'>
                     <img className='w-full h-117.75 rounded-[25px_25px_0_0] border-4 border-white md:w-75 md:rounded-[25px_0_0_25px]' src= {img11} alt="" />

@@ -1,8 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
-function Header(){
+import { use, useEffect, useState } from 'react'
+function Header(prop){
     let [opne,setOpen] = useState(true)
+    const liList = ["Home","Services","About","Portfolio","Contact"]
+    const [postion,setPostion] = useState("")
+    useEffect(function(){
+        window.addEventListener("scroll",function(){
+            setOpen(true)
+            if(window.scrollY > prop.data.current.offsetTop - 150){
+                setPostion(true)
+            }else if (window.scrollY > 100) {
+                setPostion(false)
+            }else {
+                setPostion("")
+            }
+        })
+    },[])
     function changerHeight() {
         if (opne) {
             setOpen(false)
@@ -10,14 +24,20 @@ function Header(){
             setOpen(true)
         }
     }
-    const liList = ["Home","Services","About","Portfolio","Contact"]
+    function toSection (ev) {
+        window.scrollTo({
+            top: document.querySelector(`#${ev.target.innerHTML}`).offsetTop - 80,
+            left: 0 ,
+            behavior : "smooth" ,
+        })
+    }
     const liListjsx = liList.map(function(ele){
         return (
-            <li key={ele}><a href="#" className="text-lg ">{ele}</a></li>
+            <li key={ele}><a className="text-lg cursor-pointer" onClick={toSection}>{ele}</a></li>
         )
     })
     return (
-        <header>
+        <header className= {`${postion === true ? "fixed bg-[#E2BD62] z-1000 top-0 opacity-100" : postion === false ? "opacity-0" : "opacity-100"} w-full`}>
             <div className="container flex justify-between items-center h-15">
                 <p className="text-xl lg:text-2xl ">Publish Ninja</p>
                 <ul className = {`${opne ? "h-0" : "h-75"} md:h-7 md:flex md:gap-x-5 lg:gap-x-11.75`} >

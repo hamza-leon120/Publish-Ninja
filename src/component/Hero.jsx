@@ -6,7 +6,7 @@ import imgThree from '../img/image-3.webp'
 import imgFour from '../img/image-4.webp'
 function Hero(){
     return (
-        <section>
+        <section id = "Home">
             <div className="container flex gap-y-10 flex-col items-center md:flex-col-reverse lg:flex-row lg:justify-between">
                 <div className="text-center md:text-start lg:w-140.5">
                     <h1 className="text-[39px] font-bold mb-7.75 md:text-6xl">Creative Idea Help to Grow Business</h1>

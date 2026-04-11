@@ -1,6 +1,6 @@
 function Subscribe (prop) {
     return (
-        <section ref={function(ele){return prop.data.current[5] = ele}} className="bg-[#F5F5EF] p-[29px_0px_65px_0px] opacity-0 transform-[translateY(30px)]">
+        <section id="Contact" ref={function(ele){return prop.data.current[5] = ele}} className="bg-[#F5F5EF] p-[29px_0px_65px_0px] opacity-0 transform-[translateY(30px)]">
             <div className="container">
                 <div className="mb-10.25">
                     <h2 className="text-3xl text-center mb-7.5 md:text-4xl">Subscribe To Our Newsletter</h2>

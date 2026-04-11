@@ -9,7 +9,9 @@ import Plan from "./component/Plan"
 import Services from "./component/Services"
 import Software from "./component/Software"
 import Subscribe from "./component/Subscribe"
+import Up from "./component/Up"
 function App() {
+  const softwareRef = useRef()
   const sectionRefs = useRef([])
   useEffect(function () {
     const observer = new IntersectionObserver(function (entries) {
@@ -20,7 +22,7 @@ function App() {
         }
       })
     }, {
-      threshold: 0.2
+      threshold: window.innerWidth < 375 ? 0.02 : 0.2
     })
     sectionRefs.current.forEach(function(section){
       observer.observe(section)
@@ -28,9 +30,9 @@ function App() {
   }, [])
   return (
     <>
-      <Header data={sectionRefs}/>
-      <Hero data={sectionRefs}/>
-      <Software data={sectionRefs}/>
+      <Header data = {softwareRef}/>
+      <Hero/>
+      <Software data = {softwareRef} />
       <Services data={sectionRefs} />
       <ElegantStylish data={sectionRefs} />
       <Plan data={sectionRefs} />
@@ -38,6 +40,7 @@ function App() {
       <CommentQ data={sectionRefs} />
       <Subscribe data={sectionRefs} />
       <Footer data={sectionRefs} />
+      <Up />
     </>
   )
 }

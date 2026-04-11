@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 function ElegantStylish(prop) {
     return (
-        <section className='opacity-0 transform-[translateY(30px)]' ref={function(ele){return prop.data.current[1] = ele}}>
+        <section id='About' className='opacity-0 transform-[translateY(30px)]' ref={function(ele){return prop.data.current[1] = ele}}>
             <div className="container">
                 <div className='bg-[#F5F5EF] p-10.25 rounded-lg'>
                     <h2 className='text-[27px] text-center font-bold mb-7.5 md:text-4xl md:text-start md:w-142.75'>We Are Here To Make Your Website Look more Elegant And Stylish!</h2>
